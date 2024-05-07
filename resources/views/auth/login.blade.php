@@ -2,6 +2,10 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <div>
+        <a href="/auth/github/redirect" class="fa fa-github">Github</a>&nbsp &nbsp
+        <a href="/auth/google/redirect" class="fa fa-google">Google</a>
+    </div><br/>
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
