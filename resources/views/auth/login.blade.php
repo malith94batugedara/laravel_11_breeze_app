@@ -1,10 +1,10 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <div>
-        <a href="/auth/github/redirect" class="fa fa-github">Github</a>&nbsp &nbsp
-        <a href="/auth/google/redirect" class="fa fa-google">Google</a>
+        <a href="/auth/github/redirect" class="btn btn-success">Github</a>&nbsp &nbsp
+        <a href="/auth/google/redirect" class="btn btn-primary">Google</a>
     </div><br/>
     <form method="POST" action="{{ route('login') }}">
         @csrf
